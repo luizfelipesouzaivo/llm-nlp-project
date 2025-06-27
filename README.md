@@ -82,19 +82,23 @@ Foi aplicada a técnica Chain of Thought para melhorar o prompt "Explique como f
 
 # Aplicação Desenvolvida:
 
-Um Agente Virtual de Viagens foi desenvolvido utilizando Streamlit, LLM e LangChain.
+Um Assistente Médico Virtual foi desenvolvido utilizando Streamlit, LLM e LangChain.
 
-Objetivo: Fornecer informações sobre destinos turísticos, itinerários e dicas de viagem.
+Objetivo: O objetivo principal do projeto é fornecer dicas e orientações gerais de saúde com base nas perguntas do usuário. A aplicação simula o atendimento de um agente de saúde virtual, oferecendo recomendações informativas, sem substituir diagnóstico ou atendimento profissional.
 
 - Tecnologias Usadas:
 
-1- Streamlit: Para a interface interativa do usuário.
+1- Streamlit: Utilizado para criar uma interface interativa e intuitiva que permite ao usuário digitar perguntas sobre sintomas, cuidados e saúde em geral.
 
-2- LLM: Para responder perguntas sobre destinos de forma precisa e relevante.
+2- LLM: Responsável por gerar respostas precisas e coerentes para as dúvidas dos usuários, com base em conhecimento médico geral.
 
-3- LangChain: Para orquestrar o fluxo de dados entre a interface e o modelo de linguagem.
+3- LangChain: Utilizado para orquestrar a comunicação entre a interface (Streamlit) e o modelo LLM, organizando o fluxo de dados e a lógica da aplicação.
 
 # Arquitetura do Aplicativo:
-1- A interface do usuário permite inserir perguntas sobre destinos turísticos.
+1- O usuário interage com a aplicação através de um campo de texto no Streamlit, onde insere perguntas relacionadas à saúde.
 
-2- O modelo LLM utiliza o LangChain para processar as perguntas e fornecer respostas contextuais.
+2- As perguntas são processadas pelo LangChain, que estrutura os prompts e controla a lógica de execução do agente.
+
+3- O LLM responde de forma contextualizada, oferecendo dicas, orientações gerais e possíveis cuidados, respeitando os limites éticos de um assistente virtual.
+
+4- A resposta é exibida na tela, proporcionando uma experiência natural de conversação médico-paciente simulada.
