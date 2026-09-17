@@ -1,104 +1,441 @@
-# Projeto de Introdução às LLMs para Processamento de Linguagem Natural
+# 🤖 LLM & NLP — Processamento de Linguagem Natural
 
-Este repositório contém o código e os recursos relacionados ao projeto final do curso "Introdução às LLMs para Processamento de Linguagem Natural". O objetivo do projeto foi explorar conceitos fundamentais sobre Modelos de Linguagem de Grande Escala (LLMs), engenharia de prompts, análise de dados com Named Entity Recognition (NER) e a criação de uma aplicação prática utilizando Streamlit, LLM e LangChain. O repositório está dividido nas seguintes seções:
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![NLP](https://img.shields.io/badge/NLP-Natural%20Language%20Processing-purple)
+![LLM](https://img.shields.io/badge/LLM-Large%20Language%20Models-orange)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Application-red?logo=streamlit)
+![Status](https://img.shields.io/badge/Status-Concluído-success)
 
+## 📌 Visão Geral
 
-Parte 1: Fundamentos das LLMs
+Este projeto apresenta uma aplicação prática de conceitos de **Inteligência Artificial Generativa, Large Language Models (LLMs) e Natural Language Processing (NLP)**.
 
-Parte 2: Quizzes do Curso de NLP da Hugging Face
+O projeto foi desenvolvido a partir de diferentes etapas de estudo e aplicação prática, envolvendo:
 
-Parte 3: Análise de Dados com NER
+* Fundamentos de Large Language Models;
+* Processamento de Linguagem Natural;
+* Transformers;
+* Embeddings;
+* Attention;
+* Fine-Tuning;
+* Named Entity Recognition (NER);
+* Engenharia de Prompts;
+* Chain of Thought;
+* Desenvolvimento de aplicações com LLM;
+* Integração entre **Streamlit, LangChain e modelos de linguagem**.
 
-Parte 4: Engenharia de Prompts
+O objetivo é demonstrar a aplicação dos conceitos de NLP e LLMs em diferentes cenários, indo desde os fundamentos até a construção de uma aplicação interativa.
 
-Parte 5: Projeto Prático com Streamlit, LLM e LangChain
+---
 
-# Parte 1: Fundamentos das LLMs
-Nesta seção, conceitos fundamentais dos LLMs foram explorados e explicados com exemplos práticos:
+# 🎯 Objetivos
 
-1- Pre-training: Processo inicial de treinamento de um modelo de linguagem em grandes corpora de texto para aprender padrões linguísticos.
+O projeto foi desenvolvido com os seguintes objetivos:
 
-2- Transfer Learning: Utilização de um modelo pré-treinado para resolver uma tarefa diferente, mas relacionada.
+* Compreender os principais conceitos relacionados a LLMs;
+* Explorar fundamentos de NLP;
+* Entender o funcionamento de Transformers;
+* Trabalhar com representações vetoriais de texto;
+* Aplicar técnicas de Named Entity Recognition;
+* Desenvolver e avaliar diferentes estratégias de prompting;
+* Explorar técnicas de estruturação de prompts;
+* Integrar um modelo de linguagem a uma aplicação;
+* Construir uma interface interativa utilizando Streamlit;
+* Utilizar LangChain para organizar o fluxo de interação com o modelo.
 
-3- Embeddings: Representação vetorial das palavras, permitindo que o modelo entenda o significado semântico.
+---
 
-4- Transformers: Arquitetura que utiliza mecanismos de atenção para processar sequências de dados.
+# 🧠 Conceitos Fundamentais de LLMs
 
-5- Attention: Mecanismo que permite ao modelo focar em partes específicas de uma sequência de entrada ao gerar saídas.
+Uma das etapas do projeto aborda os principais conceitos utilizados na construção e utilização de modelos modernos de linguagem.
 
-6- Fine-Tuning: Ajuste do modelo pré-treinado para tarefas específicas utilizando um conjunto de dados menor e mais focado.
+## Pre-training
 
-# Parte 2: Quizzes do Curso de NLP da Hugging Face
+Processo no qual um modelo é treinado previamente utilizando grandes volumes de texto para aprender padrões linguísticos e representações da linguagem.
 
-Foram acessados e resolvidos os quizzes dos capítulos 1, 2 e 3 do curso de NLP da Hugging Face. Os quizzes cobrem tópicos como:
+## Transfer Learning
 
-1- Introdução a NLP
+Utilização de um modelo previamente treinado como base para outras tarefas relacionadas.
 
-2- Modelos de Linguagem
+## Embeddings
 
-3- Transformers
+Representações numéricas utilizadas para transformar palavras, frases ou documentos em vetores que podem ser processados matematicamente.
 
-Screenshots dos resultados dos quizzes foram anexadas, e as explicações dos conceitos abordados em cada quiz foram incluídas na avaliação.
+## Transformers
 
-# Parte 3: Análise de Dados com NER
+Arquitetura fundamental para diversos modelos modernos de linguagem, baseada principalmente no mecanismo de atenção.
 
-# Conjunto de Dados:
+## Attention
 
-O conjunto de dados "Folha UOL News Dataset" foi utilizado para identificar e extrair entidades mencionadas nas notícias.
+Mecanismo que permite ao modelo atribuir diferentes níveis de importância às partes de uma sequência durante o processamento.
 
-1- Modelo Usado: 'monilouise/ner_pt_br'
+## Fine-Tuning
 
-2- Objetivo: Identificar as organizações mencionadas na seção "Mercado" no primeiro trimestre de 2015.
+Processo de adaptação de um modelo previamente treinado para uma tarefa ou domínio específico utilizando dados direcionados.
 
-# Metodologia:
+---
 
-1- Carregamento do dataset e aplicação do modelo NER para extração de entidades.
+# 📚 NLP — Natural Language Processing
 
-2- Criação de um ranking das organizações mais mencionadas.
+O projeto também aborda fundamentos de **Processamento de Linguagem Natural**, área da Inteligência Artificial responsável pelo processamento e análise de informações presentes em linguagem humana.
 
-# Parte 4: Engenharia de Prompts
+Entre os conceitos trabalhados estão:
 
-# Análise de Prompts:
+* Tokenização;
+* Modelos de linguagem;
+* Transformers;
+* Representação de texto;
+* Embeddings;
+* Reconhecimento de entidades;
+* Engenharia de prompts;
+* Geração de texto.
 
-Foram analisados prompts mal formulados e reformulados para melhorar a qualidade das respostas. Exemplos incluem:
+---
 
-# EXEMPLO 1:
+# 🧪 NER — Named Entity Recognition
 
-Prompt Original: "Escreva sobre cachorros."
+Uma das aplicações práticas do projeto utiliza **Named Entity Recognition (NER)** para identificar entidades presentes em textos jornalísticos.
 
-Reformulação: "Descreva os principais cuidados ao adotar um cachorro de raça específica."
+## Dataset
 
-# EXEMPLO 2:
+Foi utilizado o **Folha UOL News Dataset** para analisar notícias e identificar organizações mencionadas na seção de **Mercado durante o primeiro trimestre de 2015**.
 
-Prompt Original: "Explique física."
+## Modelo utilizado
 
-Reformulação: "Explique os princípios da física quântica em termos simples."
+```text
+monilouise/ner_pt_br
+```
 
-# Técnica Chain of Thought (CoT)
+## Objetivo
 
-Foi aplicada a técnica Chain of Thought para melhorar o prompt "Explique como funciona a energia solar." Ao decompor o raciocínio necessário para uma resposta mais clara e detalhada, a aplicação do CoT resultou em uma explicação mais coerente e bem estruturada.
+O objetivo foi identificar e extrair organizações mencionadas nas notícias e, posteriormente, analisar a frequência dessas entidades.
 
-# Parte 5: Projeto Prático com Streamlit, LLM e LangChain
+### Pipeline
 
-# Aplicação Desenvolvida:
+```text
+Dataset
+   ↓
+Textos jornalísticos
+   ↓
+Modelo NER
+   ↓
+Extração de entidades
+   ↓
+Filtragem de organizações
+   ↓
+Contagem das ocorrências
+   ↓
+Análise dos resultados
+```
 
-Um Assistente Médico Virtual foi desenvolvido utilizando Streamlit, LLM e LangChain.
+Essa etapa demonstra como técnicas de NLP podem ser utilizadas para transformar textos não estruturados em informações estruturadas.
 
-Objetivo: O objetivo principal do projeto é fornecer dicas e orientações gerais de saúde com base nas perguntas do usuário. A aplicação simula o atendimento de um agente de saúde virtual, oferecendo recomendações informativas, sem substituir diagnóstico ou atendimento profissional.
+---
 
-- Tecnologias Usadas:
+# ✍️ Engenharia de Prompts
 
-1- Streamlit: Utilizado para criar uma interface interativa e intuitiva que permite ao usuário digitar perguntas sobre sintomas, cuidados e saúde em geral.
+Outra etapa importante do projeto foi dedicada à **Prompt Engineering**.
 
-2- LLM: Responsável por gerar respostas precisas e coerentes para as dúvidas dos usuários, com base em conhecimento médico geral.
+O objetivo foi compreender como a estrutura de uma instrução pode influenciar a qualidade e a especificidade da resposta produzida por um modelo de linguagem.
 
-3- LangChain: Utilizado para orquestrar a comunicação entre a interface (Streamlit) e o modelo LLM, organizando o fluxo de dados e a lógica da aplicação.
+## Exemplo
 
-# Arquitetura do Aplicativo:
-1- O usuário interage com a aplicação através de um campo de texto no Streamlit, onde insere perguntas relacionadas à saúde.
+### Prompt pouco específico
 
-2- As perguntas são processadas pelo LangChain, que estrutura os prompts e controla a lógica de execução do agente.
+```text
+Escreva sobre cachorros.
+```
 
-3- O LLM responde de forma contextualizada, oferecendo dicas, orientações gerais e possíveis cuidados, respeitando os limites éticos de um assistente virtual.
+### Prompt estruturado
 
-4- A resposta é exibida na tela, proporcionando uma experiência natural de conversação médico-paciente simulada.
+```text
+Descreva os principais cuidados ao adotar um cachorro de uma raça específica,
+considerando alimentação, vacinação, exercícios físicos e cuidados preventivos.
+```
+
+A comparação demonstra a importância de fornecer **contexto, objetivo e especificidade** ao trabalhar com modelos de linguagem.
+
+---
+
+# 🧩 Chain of Thought
+
+O projeto também explora estratégias de estruturação de prompts para orientar o modelo na elaboração de respostas mais organizadas.
+
+Um exemplo trabalhado foi a solicitação:
+
+```text
+Explique como funciona a energia solar.
+```
+
+A abordagem foi estruturada para incentivar uma resposta organizada por etapas e aspectos do problema.
+
+> Observação: em aplicações reais, estratégias de prompting devem ser utilizadas de forma apropriada ao contexto e sem depender da exposição de raciocínio interno do modelo.
+
+---
+
+# 💻 Aplicação Prática
+
+A etapa principal de desenvolvimento consiste na criação de um **Assistente Médico Virtual** utilizando:
+
+* Streamlit;
+* LLM;
+* LangChain.
+
+A aplicação permite que o usuário envie perguntas relacionadas a sintomas, cuidados gerais e informações de saúde.
+
+O objetivo da aplicação é demonstrar a integração entre uma **interface web**, um **framework de orquestração** e um **modelo de linguagem**.
+
+---
+
+# 🏗️ Arquitetura da Aplicação
+
+O fluxo da aplicação pode ser representado da seguinte maneira:
+
+```text
+                    ┌────────────────────┐
+                    │       Usuário      │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │     Streamlit      │
+                    │   Interface Web    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │     LangChain      │
+                    │ Orquestração/Fluxo │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │        LLM         │
+                    │ Modelo de Linguagem│
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │      Resposta      │
+                    └────────────────────┘
+```
+
+---
+
+# 🩺 Assistente Médico Virtual
+
+A aplicação foi construída como uma demonstração de uso de LLM em um cenário relacionado à saúde.
+
+### Fluxo da aplicação
+
+1. O usuário insere uma pergunta;
+2. A aplicação recebe a entrada através do Streamlit;
+3. O LangChain organiza o fluxo da solicitação;
+4. A pergunta é encaminhada ao modelo de linguagem;
+5. O modelo gera uma resposta contextualizada;
+6. A resposta é apresentada ao usuário através da interface.
+
+### ⚠️ Importante
+
+Esta aplicação possui finalidade **educacional e demonstrativa**.
+
+As respostas geradas não devem ser utilizadas como diagnóstico, prescrição ou substituição de atendimento médico profissional.
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+| Tecnologia      | Aplicação                            |
+| --------------- | ------------------------------------ |
+| 🐍 Python       | Desenvolvimento                      |
+| 🤖 LLM          | Geração e processamento de linguagem |
+| 🧠 NLP          | Processamento de textos              |
+| 🔗 LangChain    | Orquestração da aplicação            |
+| 🎨 Streamlit    | Interface web interativa             |
+| 🏷️ NER         | Extração de entidades                |
+| 🔤 Transformers | Arquiteturas modernas de NLP         |
+| 📊 Pandas       | Manipulação e análise de dados       |
+
+---
+
+# 📁 Estrutura do Projeto
+
+```text
+llm-nlp-project/
+│
+├── README.md
+│
+├── requirements.txt
+│
+├── question/
+│
+└── src/
+    └── medico_agent/
+```
+
+A estrutura atual do repositório contém uma pasta `src/medico_agent`, além do arquivo de dependências e materiais utilizados no projeto.
+
+---
+
+# 🚀 Como Executar
+
+## 1. Clone o repositório
+
+```bash
+git clone https://github.com/luizfelipesouzaivo/llm-nlp-project.git
+```
+
+## 2. Acesse a pasta
+
+```bash
+cd llm-nlp-project
+```
+
+## 3. Crie um ambiente virtual
+
+### Windows
+
+```bash
+python -m venv .venv
+```
+
+Ative:
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv .venv
+```
+
+Ative:
+
+```bash
+source .venv/bin/activate
+```
+
+## 4. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+## 5. Execute a aplicação
+
+Caso o arquivo principal do agente esteja configurado como aplicação Streamlit:
+
+```bash
+streamlit run app.py
+```
+
+> O comando exato pode variar conforme o arquivo de entrada definido no projeto.
+
+---
+
+# 📊 Principais Aprendizados
+
+O desenvolvimento deste projeto permitiu trabalhar conceitos importantes relacionados à área de **Inteligência Artificial Generativa e NLP**:
+
+* Fundamentos de LLMs;
+* Pre-training;
+* Transfer Learning;
+* Embeddings;
+* Transformers;
+* Attention;
+* Fine-Tuning;
+* Natural Language Processing;
+* Named Entity Recognition;
+* Engenharia de Prompts;
+* Estruturação de prompts;
+* LangChain;
+* Streamlit;
+* Integração de LLMs em aplicações;
+* Extração de informações de textos;
+* Desenvolvimento de aplicações baseadas em linguagem natural.
+
+---
+
+# 🔄 Fluxo Geral do Projeto
+
+```text
+Fundamentos de LLM
+        ↓
+NLP
+        ↓
+Transformers
+        ↓
+NER
+        ↓
+Análise de textos
+        ↓
+Prompt Engineering
+        ↓
+LLM + LangChain
+        ↓
+Streamlit
+        ↓
+Aplicação prática
+```
+
+---
+
+# 📌 Possíveis Aplicações
+
+Os conhecimentos explorados neste projeto podem ser utilizados em diferentes soluções de Inteligência Artificial, como:
+
+* Assistentes virtuais;
+* Chatbots;
+* Classificação de textos;
+* Extração de informações;
+* Análise de documentos;
+* Busca semântica;
+* Sistemas de perguntas e respostas;
+* Automação de tarefas textuais;
+* Análise de notícias;
+* Processamento de documentos corporativos;
+* Sistemas baseados em LLM.
+
+---
+
+# 👨‍💻 Autor
+
+## Luiz Felipe Souza Ivo
+
+Graduado em **Sistemas de Informação**, com foco de desenvolvimento profissional em:
+
+* 🤖 Inteligência Artificial
+* 🧠 Machine Learning
+* 💬 NLP
+* 📊 Análise de Dados
+* 🐍 Python
+* 🗄️ SQL
+* 📈 Power BI
+
+### 🔗 Contatos
+
+[![GitHub](https://img.shields.io/badge/GitHub-Luiz%20Felipe-181717?logo=github)](https://github.com/luizfelipesouzaivo)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Luiz%20Felipe-0A66C2?logo=linkedin)](https://linkedin.com/in/luiz-felipe-souza-ivo/)
+
+---
+
+## 📚 Referências
+
+* Hugging Face — Natural Language Processing
+* LangChain
+* Streamlit
+* Modelos de linguagem e Transformers
+
+---
+
+## 📌 Sobre o Projeto
+
+Este projeto faz parte do meu portfólio de estudos em **Inteligência Artificial, Natural Language Processing e Large Language Models**.
+
+A implementação reúne fundamentos teóricos e aplicações práticas, demonstrando desde conceitos essenciais de modelos de linguagem até a construção de uma aplicação interativa utilizando **LLM, LangChain e Streamlit**.
+
+O projeto foi desenvolvido como trabalho final do curso **Introdução às LLMs para Processamento de Linguagem Natural**.
